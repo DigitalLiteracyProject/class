@@ -48,7 +48,7 @@ gulp.task('scripts', function() {
         env: env
       }, {
         includeExtensions: extensions
-      })).transform('reactify')
+      })).transform('babelify')
       .bundle()
       .pipe(source('app.js'))
       .pipe(gulp.dest('.tmp/scripts/bundle'))
