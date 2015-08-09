@@ -27,3 +27,9 @@ Scaffolded with the [React Reflux](https://github.com/TFaga/generator-react-refl
 * Parse
 * Express
 * Socket.io
+
+## Todos
+
+* Add scaffolding for Express
+* Add socket.io
+* Add high-level architectural sketches
