@@ -3,18 +3,18 @@ var Router = require('react-router');
 var RouteHandler = Router.RouteHandler;
 
 /**
- * Top-level wrapper component; all other views are contained within this.
+ * Boilerplate for a view that contains other views.
  */
-var Layout = React.createClass({
+var Shell = React.createClass({
 
   render: function() {
 
     return (
-      <div className="App">
+      <div>
         <RouteHandler/>
       </div>
     );
   }
 });
 
-module.exports = Layout;
+module.exports = Shell;

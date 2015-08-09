@@ -1,5 +1,8 @@
 var React = require('react');
 
+/**
+ * Boilerplate for a "leaf" view; that is, one without sub-views.
+ */
 var Home = React.createClass({
 
   render: function() {
