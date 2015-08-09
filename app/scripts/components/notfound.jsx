@@ -1,9 +1,9 @@
-var React = require('react');
+import React from 'react';
 
 /**
  * A 404 page.
  */
-var NotFound = React.createClass({
+let NotFound = React.createClass({
 
   render: function() {
 
@@ -15,4 +15,4 @@ var NotFound = React.createClass({
   }
 });
 
-module.exports = NotFound;
+export default NotFound;

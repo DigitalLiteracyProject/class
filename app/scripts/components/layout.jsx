@@ -1,11 +1,10 @@
-var React = require('react');
-var Router = require('react-router');
-var RouteHandler = Router.RouteHandler;
+import React from 'react';
+import {RouteHandler} from 'react-router';
 
 /**
  * Top-level wrapper component; all other views are contained within this.
  */
-var Layout = React.createClass({
+let Layout = React.createClass({
 
   render: function() {
 
@@ -17,4 +16,4 @@ var Layout = React.createClass({
   }
 });
 
-module.exports = Layout;
+export default Layout;

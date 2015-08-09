@@ -1,17 +1,13 @@
-var React = require('react');
-var Router = require('react-router');
-var Route = Router.Route;
-var DefaultRoute = Router.DefaultRoute;
-var NotFoundRoute = Router.NotFoundRoute;
-
-var Layout = require('./components/layout');
-var Home = require('./components/home');
-var NotFound = require('./components/notfound');
-var Shell = require('./components/shell');
+import React from 'react';
+import Router, {Route, DefaultRoute, NotFoundRoute} from 'react-router';
+import Layout from './components/layout';
+import Home from './components/home';
+import NotFound from './components/notfound';
+import Shell from './components/shell';
 
 // TODO(neel): make routing more consistent (/modules/new creates a new
 // module, while /class creates a new class; unify that)
-var routes = (
+let routes = (
   <Route handler={Layout} name="layout" path="/">
     <Route handler={Home} name="student-login" path="/student/login"/>
     <Route handler={Home} name="teacher-login" path="/teacher/login"/>
@@ -22,8 +18,9 @@ var routes = (
 
     <Route handler={Shell} name="teacher-layout" path="/teacher">
       <Route handler={Shell} name="teacher-class" path="class">
-        <Route handler={Shell} name="class-dashboard" path=":classId">
+        <Route handler={Shell} name="class" path=":classId">
           <Route handler={Home} name="running-module" path="modules/:moduleId"/>
+          <DefaultRoute handler={Home} name="class-dashboard"/>
         </Route>
         <DefaultRoute handler={Home} name="create-class"/>
       </Route>
@@ -38,8 +35,7 @@ var routes = (
   </Route>
 );
 
-exports.start = function() {
-
+export function start() {
   Router.run(routes, function(Handler) {
     React.render(<Handler/>, document.getElementById('content'));
   });
