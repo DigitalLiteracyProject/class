@@ -138,6 +138,7 @@ gulp.task('bundle', function() {
     .pipe($.size());
 });
 
+// TODO(neel): use live-reloading Express server here
 gulp.task('webserver', function() {
   webserver = gulp.src(['.tmp', 'app'])
     .pipe($.webserver({
