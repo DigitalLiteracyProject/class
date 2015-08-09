@@ -7,14 +7,14 @@ var RouteHandler = Router.RouteHandler;
  */
 var Shell = React.createClass({
 
-  render: function() {
+    render: function() {
 
-    return (
-      <div>
-        <RouteHandler/>
-      </div>
-    );
-  }
+        return (
+            <div>
+                <RouteHandler/>
+            </div>
+        );
+    }
 });
 
 module.exports = Shell;

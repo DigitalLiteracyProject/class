@@ -6,14 +6,14 @@ import {RouteHandler} from 'react-router';
  */
 let Layout = React.createClass({
 
-  render: function() {
+    render: function() {
 
-    return (
-      <div className="App">
-        <RouteHandler/>
-      </div>
-    );
-  }
+        return (
+            <div className="App">
+                <RouteHandler/>
+            </div>
+        );
+    }
 });
 
 export default Layout;

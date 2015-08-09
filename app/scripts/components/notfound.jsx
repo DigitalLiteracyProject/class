@@ -5,14 +5,14 @@ import React from 'react';
  */
 let NotFound = React.createClass({
 
-  render: function() {
+    render: function() {
 
-    return (
-      <div className="hero-unit">
-        <h1>404 :(</h1>
-      </div>
-    );
-  }
+        return (
+            <div className="hero-unit">
+                <h1>404 :(</h1>
+            </div>
+        );
+    }
 });
 
 export default NotFound;
