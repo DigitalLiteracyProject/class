@@ -1,23 +1,19 @@
-var React = require('react');
+import React from 'react';
 
 /**
  * Boilerplate for a "leaf" view; that is, one without sub-views.
  */
-var Home = React.createClass({
+let Home = React.createClass({
 
   render: function() {
 
     return (
       <div className="hero-unit">
-        <h1>'Allo, 'Allo!</h1>
-        <p>You now have</p>
-        <ul>
-          <li>ReactJS Reflux Boilerplate</li>
-          <li>Sass with Compass</li>
-        </ul>
+        <h1>This is DLP Class!</h1>
+        <p>Not CS50.</p>
       </div>
     );
   }
 });
 
-module.exports = Home;
+export default Home;
