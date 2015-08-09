@@ -4,6 +4,8 @@ import Layout from './components/layout';
 import Home from './components/home';
 import NotFound from './components/notfound';
 import Shell from './components/shell';
+import TeacherLayout from './components/teacher-layout';
+
 // TODO(neel): make routing more consistent (/modules/new creates a new
 // module, while /class creates a new class; unify that)
 let routes = (
@@ -15,7 +17,7 @@ let routes = (
             <Route handler={Home} name="student-class" path="class"/>
         </Route>
 
-        <Route handler={Shell} name="teacher-layout" path="/teacher">
+        <Route handler={TeacherLayout} name="teacher-layout" path="/teacher">
             <Route handler={Shell} name="teacher-class" path="class">
                 <Route handler={Shell} name="class" path=":classId">
                     <Route handler={Home} name="running-module" path="modules/:moduleId"/>
