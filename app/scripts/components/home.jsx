@@ -9,8 +9,8 @@ var Home = React.createClass({
         <h1>'Allo, 'Allo!</h1>
         <p>You now have</p>
         <ul>
-            <li>ReactJS Reflux Boilerplate</li>
-            <li>Sass with Compass</li>
+          <li>ReactJS Reflux Boilerplate</li>
+          <li>Sass with Compass</li>
         </ul>
       </div>
     );
