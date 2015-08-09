@@ -1,0 +1,19 @@
+{
+  "name": "class",
+  "version": "0.1.0",
+  "authors": [
+    "Neel Mehta"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {}
+}
