@@ -6,30 +6,29 @@ import NotFound from './components/notfound';
 import Shell from './components/shell';
 import TeacherLayout from './components/teacher-layout';
 
-// TODO(neel): make routing more consistent (/modules/new creates a new
-// module, while /class creates a new class; unify that)
 let routes = (
     <Route handler={Layout} name="layout" path="/">
         <Route handler={Home} name="student-login" path="/student/login"/>
         <Route handler={Home} name="teacher-login" path="/teacher/login"/>
 
         <Route handler={Shell} name="student-layout" path="/student">
-            <Route handler={Home} name="student-class" path="class"/>
+            <DefaultRoute handler={Home} name="student-class"/>
         </Route>
 
         <Route handler={TeacherLayout} name="teacher-layout" path="/teacher">
-            <Route handler={Shell} name="teacher-class" path="class">
-                <Route handler={Shell} name="class" path=":classId">
-                    <Route handler={Home} name="running-module" path="modules/:moduleId"/>
-                    <DefaultRoute handler={Home} name="class-dashboard"/>
-                </Route>
-                <DefaultRoute handler={Home} name="create-class"/>
+            <Route handler={Shell} name="class" path="class/:classId">
+                <Route handler={Home} name="running-module" path="modules/:moduleId"/>
+                <DefaultRoute handler={Home} name="class-dashboard"/>
             </Route>
             <Route handler={Shell} name="teacher-modules" path="modules">
-                <Route handler={Home} name="create-module" path="new"/>
+                <Route handler={Home} name="preview-module" path=":moduleId"/>
                 <DefaultRoute handler={Home} name="module-library"/>
             </Route>
+            <DefaultRoute handler={Home} name="teacher-dashboard"/>
         </Route>
+
+        <Route handler={Home} name="create-class" path="create/class"/>
+        <Route handler={Home} name="create-module" path="create/module"/>
 
         <DefaultRoute handler={Home}/>
         <NotFoundRoute handler={NotFound}/>
