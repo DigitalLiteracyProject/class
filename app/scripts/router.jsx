@@ -20,15 +20,17 @@ let routes = (
                 <Route handler={Home} name="running-module" path="modules/:moduleId"/>
                 <DefaultRoute handler={Home} name="class-dashboard"/>
             </Route>
+
             <Route handler={Shell} name="teacher-modules" path="modules">
                 <Route handler={Home} name="preview-module" path=":moduleId"/>
                 <DefaultRoute handler={Home} name="module-library"/>
             </Route>
+
+            <Route handler={Home} name="create-class" path="create/class"/>
+            <Route handler={Home} name="create-module" path="create/module"/>
+
             <DefaultRoute handler={Home} name="teacher-dashboard"/>
         </Route>
-
-        <Route handler={Home} name="create-class" path="create/class"/>
-        <Route handler={Home} name="create-module" path="create/module"/>
 
         <DefaultRoute handler={Home}/>
         <NotFoundRoute handler={NotFound}/>
