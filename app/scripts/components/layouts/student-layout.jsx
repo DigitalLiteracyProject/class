@@ -19,7 +19,9 @@ let ShellLayout = React.createClass({
                     </Nav>
                 </Navbar>
 
-                <RouteHandler/>
+                <div className="container">
+                    <RouteHandler/>
+                </div>
             </div>
         );
     }
