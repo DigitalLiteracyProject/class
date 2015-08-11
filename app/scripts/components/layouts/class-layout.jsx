@@ -1,11 +1,10 @@
-var React = require('react');
-var Router = require('react-router');
-var RouteHandler = Router.RouteHandler;
+import React from 'react';
+import {RouteHandler} from 'react-router';
 
 /**
  * Boilerplate for a view that contains other views.
  */
-var Shell = React.createClass({
+let ShellLayout = React.createClass({
 
     render: function() {
 
@@ -17,4 +16,4 @@ var Shell = React.createClass({
     }
 });
 
-module.exports = Shell;
+export default ShellLayout;

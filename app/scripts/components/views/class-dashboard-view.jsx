@@ -1,9 +1,9 @@
 import React from 'react';
 
 /**
- * Boilerplate for a "leaf" view; that is, one without sub-views.
+ * Boilerplate for a "leaf" view -- one without sub-views.
  */
-let Home = React.createClass({
+let HomeView = React.createClass({
 
     render: function() {
 
@@ -16,4 +16,4 @@ let Home = React.createClass({
     }
 });
 
-export default Home;
+export default HomeView;
