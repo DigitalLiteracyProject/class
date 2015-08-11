@@ -25,8 +25,8 @@ let routes = (
     <Route handler={Layout} name="layout" path="/">
 
         <Route handler={LoginLayout} name="login-layout">
-            <Route handler={StudentLoginView} name="student-login" path="student/login"/>
-            <Route handler={TeacherLoginView} name="teacher-login" path="teacher/login"/>
+            <Route handler={StudentLoginView} name="student-login" path="/student/login"/>
+            <Route handler={TeacherLoginView} name="teacher-login" path="/teacher/login"/>
         </Route>
 
         {/* TODO(neel): create student shell (simple header bar) */}
