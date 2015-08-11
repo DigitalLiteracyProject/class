@@ -24,7 +24,7 @@ import TeacherLoginView from './components/views/teacher-login-view';
 let routes = (
     <Route handler={Layout} name="layout" path="/">
 
-        <Route handler={LoginLayout} name="login-layout" path="/">
+        <Route handler={LoginLayout} name="login-layout">
             <Route handler={StudentLoginView} name="student-login" path="student/login"/>
             <Route handler={TeacherLoginView} name="teacher-login" path="teacher/login"/>
         </Route>
@@ -61,8 +61,7 @@ let routes = (
             <DefaultRoute handler={TeacherDashboardView} name="teacher-dashboard"/>
         </Route>
 
-        {/* TODO(neel): two-button login page
-             FIXME(neel): this doesn't work! just a blank page */}
+        {/* TODO(neel): two-button login page */}
         <DefaultRoute handler={HomeView}/>
 
         <NotFoundRoute handler={NotFound}/>
