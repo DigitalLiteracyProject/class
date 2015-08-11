@@ -10,6 +10,7 @@ let ShellLayout = React.createClass({
 
         return (
             <div>
+                <h2>This is your classroom.</h2>
                 <RouteHandler/>
             </div>
         );

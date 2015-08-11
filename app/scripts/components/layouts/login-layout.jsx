@@ -10,6 +10,7 @@ let ShellLayout = React.createClass({
 
         return (
             <div>
+                <h1>You're logging in to DLP Class.</h1>
                 <RouteHandler/>
             </div>
         );

@@ -39,7 +39,7 @@ let routes = (
             {/* TODO(neel): create class wrapper (header with name of class) */}
             <Route handler={ClassLayout} name="class" path="class/:classId">
                 {/* TODO(neel): module view (preview & student responses) */}
-                <Route handler={ClassModuleView} name="running-module" path="modules/:moduleId"/>
+                <Route handler={ClassModuleView} name="class-module" path="modules/:moduleId"/>
                 {/* TODO(neel): class dashboard (list of modules & active one) */}
                 <DefaultRoute handler={ClassDashboardView} name="class-dashboard"/>
             </Route>

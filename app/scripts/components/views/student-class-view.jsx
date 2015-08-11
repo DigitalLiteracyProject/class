@@ -9,8 +9,7 @@ let HomeView = React.createClass({
 
         return (
             <div className="hero-unit">
-                <h1>This is DLP Class!</h1>
-                <p>Not CS50.</p>
+                <h1>Sit down, kid.</h1>
             </div>
         );
     }

@@ -10,7 +10,7 @@ let HomeView = React.createClass({
         return (
             <div className="hero-unit">
                 <h1>This is DLP Class!</h1>
-                <p>Not CS50.</p>
+                <p>This is a module.</p>
             </div>
         );
     }

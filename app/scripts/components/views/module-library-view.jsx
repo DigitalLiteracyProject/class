@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {ButtonLink} from 'react-router-bootstrap';
 /**
  * Boilerplate for a "leaf" view -- one without sub-views.
  */
@@ -9,8 +9,8 @@ let HomeView = React.createClass({
 
         return (
             <div className="hero-unit">
-                <h1>This is DLP Class!</h1>
-                <p>Not CS50.</p>
+                <h1>Modules -- Modules everywhere</h1>
+                <ButtonLink to="preview-module" params={{ moduleId: 95 }}>Check one out</ButtonLink>
             </div>
         );
     }
