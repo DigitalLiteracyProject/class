@@ -8,8 +8,11 @@ import TeacherLayout from './components/teacher-layout';
 
 let routes = (
     <Route handler={Layout} name="layout" path="/">
-        <Route handler={Home} name="student-login" path="/student/login"/>
-        <Route handler={Home} name="teacher-login" path="/teacher/login"/>
+
+        <Route handler={Shell} name="login-layout" path="/">
+            <Route handler={Home} name="student-login" path="student/login"/>
+            <Route handler={Home} name="teacher-login" path="teacher/login"/>
+        </Route>
 
         {/* TODO(neel): create student shell (simple header bar) */}
         <Route handler={Shell} name="student-layout" path="/student">
