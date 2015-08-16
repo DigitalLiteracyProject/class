@@ -1,5 +1,5 @@
 import React from 'react';
-import {ButtonLink} from 'react-router-bootstrap';
+import {Link} from 'react-router';
 import {Row, Col, Panel, Input, Button} from 'react-bootstrap';
 
 /**
@@ -18,20 +18,18 @@ let HomeView = React.createClass({
 
         return (
             <div>
-                <h2>Choose a new module</h2>
+                <h2>Your modules</h2>
 
                 <Input type="text" buttonAfter={searchButton} />
 
                 <Row>
                     <Col xs={6} md={4}>
                         <Panel>
-                            {/* TODO(neel): STOPSHIP make this Panel a link
-                                in itself */}
-                            <ButtonLink
+                            <Link
                                     to="preview-module"
                                     params={{ moduleId: 95 }}>
                                 First module
-                            </ButtonLink>
+                            </Link>
                         </Panel>
                     </Col>
                     <Col xs={6} md={4}>
