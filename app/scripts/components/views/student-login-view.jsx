@@ -1,19 +1,31 @@
 import React from 'react';
 import {ButtonLink} from 'react-router-bootstrap';
+import {Input} from 'react-bootstrap';
 
 /**
- * Boilerplate for a "leaf" view -- one without sub-views.
+ * Renders a page for students to log in.
  */
-let HomeView = React.createClass({
+let StudentLoginView = React.createClass({
 
     render: function() {
-
         return (
-            <div className="hero-unit">
-                <ButtonLink to="student-class">Go to class</ButtonLink>
+            <div>
+                <Input
+                    type="text"
+                    placeholder="First name" />
+                <Input
+                    type="text"
+                    placeholder="Last name" />
+                <ButtonLink
+                        to="student-class"
+                        bsStyle="primary"
+                        bsSize="large"
+                        block>
+                    Enter class
+                </ButtonLink>
             </div>
         );
     }
 });
 
-export default HomeView;
+export default StudentLoginView;
