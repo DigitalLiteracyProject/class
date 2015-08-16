@@ -1,5 +1,5 @@
 import React from 'react';
-import {ButtonLink} from 'react-router-bootstrap';
+import {ListGroupItemLink} from 'react-router-bootstrap';
 import {PageHeader, ListGroup, ListGroupItem} from 'react-bootstrap';
 
 /**
@@ -15,14 +15,11 @@ let TeacherDashboardView = React.createClass({
                 </PageHeader>
 
                 <ListGroup>
-                  <ListGroupItem>
-                    {/* TODO(neel): STOPSHIP use React Router Bootstrap to get a
-                        linked item */}
-                        <ButtonLink to="class-dashboard"
-                                params={{ classId: 1636 }}>
-                            Cool School Fall 2015
-                        </ButtonLink>
-                  </ListGroupItem>
+                  <ListGroupItemLink
+                        to="class-dashboard"
+                        params={{ classId: 1636 }}>
+                    Cool School Fall 2015
+                  </ListGroupItemLink>
                 </ListGroup>
             </div>
         );
