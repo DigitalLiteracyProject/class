@@ -8,7 +8,8 @@ import {Row, Col} from 'react-bootstrap';
 let LoginLayout = React.createClass({
 
     render: function() {
-
+        // TODO(neel): extract the narrow, centerec block design here into
+        // its own component (can be reused in the Home View, for instance)
         return (
             <div>
                 <div className="container centered">
