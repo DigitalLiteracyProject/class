@@ -3,12 +3,11 @@ import {RouteHandler} from 'react-router';
 import {PageHeader} from 'react-bootstrap';
 
 /**
- * Boilerplate for a view that contains other views.
+ * Shell for all views triggered when a teacher is leading a class.
  */
-let ShellLayout = React.createClass({
+let ClassLayout = React.createClass({
 
     render: function() {
-
         return (
             <div>
                 <PageHeader>Your Cool Class Fall 2015</PageHeader>
@@ -20,4 +19,4 @@ let ShellLayout = React.createClass({
     }
 });
 
-export default ShellLayout;
+export default ClassLayout;
