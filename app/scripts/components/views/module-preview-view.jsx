@@ -1,19 +1,26 @@
 import React from 'react';
+import {Panel, PageHeader} from 'react-bootstrap';
 
 /**
- * Boilerplate for a "leaf" view -- one without sub-views.
+ * Previews a module when the teacher is just browsing for modules.
  */
-let HomeView = React.createClass({
+let ModulePreviewView = React.createClass({
 
     render: function() {
-
         return (
-            <div className="hero-unit">
-                <h1>This is DLP Class!</h1>
-                <p>This is a module.</p>
+            <div>
+                <PageHeader>
+                    "Cool Module"
+                    <small>By Neel</small>
+                </PageHeader>
+
+                {/* TODO(neel): display # of module uses, stars here */}
+                <Panel>
+                    <h3>Module Preview</h3>
+                </Panel>
             </div>
         );
     }
 });
 
-export default HomeView;
+export default ModulePreviewView;
