@@ -12,7 +12,9 @@ let ShellLayout = React.createClass({
         return (
             <div>
                 <PageHeader>Your Cool Class Fall 2015</PageHeader>
-                <RouteHandler/>
+                <div className="container">
+                    <RouteHandler/>
+                </div>
             </div>
         );
     }

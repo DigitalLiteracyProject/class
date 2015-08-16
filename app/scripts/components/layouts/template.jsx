@@ -10,7 +10,9 @@ let ShellLayout = React.createClass({
 
         return (
             <div>
-                <RouteHandler/>
+                <div className="container">
+                    <RouteHandler/>
+                </div>
             </div>
         );
     }
