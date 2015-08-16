@@ -15,9 +15,10 @@ let TeacherLayout = React.createClass({
             <div>
                 <Navbar brand='DLP Class' toggleNavKey={0}>
                     <Nav eventKey={0} right>
-                        {/* This is the eventKey referenced */}
                         <NavItemLink to="teacher-dashboard" eventKey={1}>Dashboard</NavItemLink>
                         <NavItemLink to="module-library" eventKey={2}>Module Library</NavItemLink>
+                        {/* TODO(neel): make this actually log out */}
+                        <NavItemLink to="teacher-login" eventKey={3}>Log Out</NavItemLink>
                     </Nav>
                 </Navbar>
 
