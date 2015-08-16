@@ -29,39 +29,27 @@ let routes = (
             <Route handler={TeacherLoginView} name="teacher-login" path="/teacher/login"/>
         </Route>
 
-        {/* TODO(neel): create student shell (simple header bar) */}
         <Route handler={StudentLayout} name="student-layout" path="/student">
-            {/* TODO(neel): create class view (wrapper around module view) */}
             <DefaultRoute handler={StudentClassView} name="student-class"/>
         </Route>
 
         <Route handler={TeacherLayout} name="teacher-layout" path="/teacher">
-            {/* TODO(neel): create class wrapper (header with name of class) */}
             <Route handler={ClassLayout} name="class" path="class/:classId">
-                {/* TODO(neel): module view (preview & student responses) */}
                 <Route handler={ClassModuleView} name="class-module" path="modules/:moduleId"/>
-                {/* TODO(neel): class dashboard (list of modules & active one) */}
                 <DefaultRoute handler={ClassDashboardView} name="class-dashboard"/>
             </Route>
 
-            {/* TODO(neel): pretty much a thin wrapper */}
             <Route handler={ModuleLayout} name="teacher-modules" path="modules">
-                {/* TODO(neel): module preview and name (no student responses)  */}
                 <Route handler={ModulePreviewView} name="preview-module" path=":moduleId"/>
-                {/* TODO(neel): list of modules & searching */}
                 <DefaultRoute handler={ModuleLibraryView} name="module-library"/>
             </Route>
 
-            {/* TODO(neel): class creation form  */}
             <Route handler={CreateClassView} name="create-class" path="create/class"/>
-            {/* TODO(neel): module creation form */}
             <Route handler={CreateModuleView} name="create-module" path="create/module"/>
 
-            {/* TODO(neel): teacher dashboard (list of classes) */}
             <DefaultRoute handler={TeacherDashboardView} name="teacher-dashboard"/>
         </Route>
 
-        {/* TODO(neel): two-button login page */}
         <DefaultRoute handler={HomeView} name="home"/>
 
         <NotFoundRoute handler={NotFoundView}/>
