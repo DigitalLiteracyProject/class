@@ -1,13 +1,12 @@
 import React from 'react';
 import Router, {Route, DefaultRoute, NotFoundRoute} from 'react-router';
-import TopLayout from './components/layouts/top-layout';
-import NotFound from './components/notfound';
 
 import ClassLayout from './components/layouts/class-layout';
 import LoginLayout from './components/layouts/login-layout';
 import ModuleLayout from './components/layouts/module-layout';
 import StudentLayout from './components/layouts/student-layout';
 import TeacherLayout from './components/layouts/teacher-layout';
+import TopLayout from './components/layouts/top-layout';
 
 import ClassDashboardView from './components/views/class-dashboard-view';
 import ClassModuleView from './components/views/class-module-view';
@@ -20,6 +19,7 @@ import StudentClassView from './components/views/student-class-view';
 import StudentLoginView from './components/views/student-login-view';
 import TeacherDashboardView from './components/views/teacher-dashboard-view';
 import TeacherLoginView from './components/views/teacher-login-view';
+import NotFoundView from './components/views/not-found-view';
 
 let routes = (
     <Route handler={TopLayout} name="top-layout" path="/">
@@ -62,9 +62,9 @@ let routes = (
         </Route>
 
         {/* TODO(neel): two-button login page */}
-        <DefaultRoute handler={HomeView}/>
+        <DefaultRoute handler={HomeView} name="home"/>
 
-        <NotFoundRoute handler={NotFound}/>
+        <NotFoundRoute handler={NotFoundView}/>
     </Route>
 );
 
