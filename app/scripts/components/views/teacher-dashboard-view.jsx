@@ -11,7 +11,7 @@ let TeacherDashboardView = React.createClass({
         return (
             <div className="hero-unit">
                 <PageHeader>
-                    Hi, <strong>Neel</strong>.
+                    Hi, <strong>Neel</strong>!
                 </PageHeader>
 
                 <ListGroup>
