@@ -1,6 +1,6 @@
 import React from 'react';
 import Router, {Route, DefaultRoute, NotFoundRoute} from 'react-router';
-import Layout from './components/layout';
+import TopLayout from './components/layouts/top-layout';
 import NotFound from './components/notfound';
 
 import ClassLayout from './components/layouts/class-layout';
@@ -22,7 +22,7 @@ import TeacherDashboardView from './components/views/teacher-dashboard-view';
 import TeacherLoginView from './components/views/teacher-login-view';
 
 let routes = (
-    <Route handler={Layout} name="layout" path="/">
+    <Route handler={TopLayout} name="top-layout" path="/">
 
         <Route handler={LoginLayout} name="login-layout">
             <Route handler={StudentLoginView} name="student-login" path="/student/login"/>

@@ -4,10 +4,9 @@ import {RouteHandler} from 'react-router';
 /**
  * Top-level wrapper component; all other views are contained within this.
  */
-let Layout = React.createClass({
+let TopLayout = React.createClass({
 
     render: function() {
-
         return (
             <div className="App">
                 <RouteHandler/>
@@ -16,4 +15,4 @@ let Layout = React.createClass({
     }
 });
 
-export default Layout;
+export default TopLayout;
