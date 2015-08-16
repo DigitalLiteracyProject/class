@@ -1,18 +1,19 @@
 import React from 'react';
+import {Panel} from 'react-bootstrap';
 
 /**
- * Boilerplate for a "leaf" view -- one without sub-views.
+ * What a student sees when they are in class. Mostly just a module.
  */
-let HomeView = React.createClass({
+let StudentClassView = React.createClass({
 
     render: function() {
 
         return (
-            <div className="hero-unit">
-                <h1>Sit down, kid.</h1>
-            </div>
+            <Panel>
+                <h1>Module goes here</h1>
+            </Panel>
         );
     }
 });
 
-export default HomeView;
+export default StudentClassView;
