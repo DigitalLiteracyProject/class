@@ -1,22 +1,29 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
+import {Row, Col} from 'react-bootstrap';
 
 /**
- * Boilerplate for a view that contains other views.
+ * Wraps login views for students and teachers.
  */
-let ShellLayout = React.createClass({
+let LoginLayout = React.createClass({
 
     render: function() {
 
         return (
             <div>
-                <h1>You're logging in to DLP Class.</h1>
-                <div className="container">
-                    <RouteHandler/>
+                <div className="container centered">
+                    <Row>
+                        <Col xs={12} md={4} mdOffset={4}>
+                            <img src="images/dlp-logo.png"
+                                className="img img-responsive vertical-padding"
+                                alt="Digital Literacy Project" />
+                            <RouteHandler/>
+                        </Col>
+                    </Row>
                 </div>
             </div>
         );
     }
 });
 
-export default ShellLayout;
+export default LoginLayout;
