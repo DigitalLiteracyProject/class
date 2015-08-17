@@ -1,7 +1,13 @@
 node_modules
 dist
-test/temp
 .sass-cache
 app/vendor
-.tmp
-test/scripts/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS stuff
+.DS_Store
+Desktop.ini
