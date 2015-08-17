@@ -1,8 +1,6 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
-import {
-    Navbar, Nav, NavItem
-} from 'react-bootstrap';
+import {Navbar, Nav, NavItem} from 'react-bootstrap';
 
 /**
  * Boilerplate for a view that contains other views.
