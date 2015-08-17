@@ -5,13 +5,13 @@ var webpackConfig = require('./webpack')('test')
 var files = config.sourceDirectory + '/scripts/**/__tests__/*'
 
 var karmaConfig = {
-  frameworks: ['mocha', 'sinon-chai'],
-  files: [  files ],
-  preprocessors: {},
-  webpack: webpackConfig,
-  singleRun: process.env.TRAVIS_CI === 'true',
-  reporters: ['nyan'],
-  browsers: [(process.env.TRAVIS_CI === 'true'? 'Firefox' : 'Chrome')]
+    frameworks: ['mocha', 'sinon-chai'],
+    files: [files],
+    preprocessors: {},
+    webpack: webpackConfig,
+    singleRun: process.env.TRAVIS_CI === 'true',
+    reporters: ['nyan'],
+    browsers: [(process.env.TRAVIS_CI === 'true' ? 'Firefox' : 'Chrome')]
 }
 
 karmaConfig.preprocessors[files] = ['webpack']
