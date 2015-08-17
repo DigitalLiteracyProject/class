@@ -13,9 +13,24 @@ $ gem install compass
 
 ## Running
 
+To run in development with a live-reloading server:
+
 ```sh
-$ gulp serve
+$ gulp
 ```
+
+To run in production:
+
+```sh
+$ npm start
+```
+
+To test:
+
+```sh
+$ npm test
+```
+
 
 ## Stack
 
