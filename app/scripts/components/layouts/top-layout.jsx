@@ -1,6 +1,6 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
-import io from 'socket.io-client';
+// import io from 'socket.io-client';
 
 /**
  * Top-level wrapper component; all other views are contained within this.
@@ -8,8 +8,8 @@ import io from 'socket.io-client';
 let TopLayout = React.createClass({
 
     componentDidMount: function() {
-        let socket = io();
-        // TODO(neel): test this here
+        // let socket = io();
+        // // TODO(neel): test this here
     },
 
     render: function() {
