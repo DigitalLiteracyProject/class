@@ -1,8 +1,10 @@
-var config = require('./')
+var config = require('./');
+var serverConfig = require('./server');
 
 module.exports = {
-  server: {
-    baseDir: config.publicDirectory
-  },
-  files: ['dist/**/*.html']
-}
+    // server: {
+    //   baseDir: config.publicDirectory
+    // },
+    proxy: "http://localhost:" + serverConfig.port,
+    files: ['dist/**/*.html']
+};
