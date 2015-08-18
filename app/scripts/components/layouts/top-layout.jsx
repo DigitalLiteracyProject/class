@@ -1,6 +1,6 @@
 import React from 'react';
 import {RouteHandler} from 'react-router';
-// import io from 'socket.io-client';
+import io from 'socket.io-client';
 
 /**
  * Top-level wrapper component; all other views are contained within this.
@@ -8,8 +8,14 @@ import {RouteHandler} from 'react-router';
 let TopLayout = React.createClass({
 
     componentDidMount: function() {
-        // let socket = io();
-        // // TODO(neel): test this here
+        let socket = io('http://localhost:5000');
+        console.log(socket);
+        socket.on('connect', () => {
+            console.log("connected");
+        });
+        socket.on("news", (data) => {
+            console.log("Got news from socket.io:", data);
+        })
     },
 
     render: function() {
