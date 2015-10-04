@@ -3,6 +3,9 @@
 An online classroom management tool for [Digital Literacy Project](http://dlp.io)
 teaching volunteers.
 
+## Overview
+
+
 ## Setting up
 
 ```sh
