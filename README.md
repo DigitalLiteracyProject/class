@@ -1,7 +1,5 @@
 # DLP Class
-
-An online classroom management tool for [Digital Literacy Project](http://dlp.io)
-teaching volunteers.
+An online classroom management tool for [Digital Literacy Project](http://dlp.io)<br>teaching volunteers.
 
 ## Overview
 
@@ -16,7 +14,6 @@ $ gem install compass
 ```
 
 ## Running
-
 To run in development with a live-reloading server:
 
 ```sh
@@ -35,20 +32,16 @@ To test:
 $ npm test
 ```
 
-
 ## Stack
-
 Scaffolded with the [React Reflux](https://github.com/TFaga/generator-react-reflux) generator.
-
-* React
-* Reflux
-* Bootstrap
-* Parse
-* Express
-* Socket.io
+- React
+- Reflux
+- Bootstrap
+- Parse
+- Express
+- Socket.io
 
 ## Todos
-
-* Add scaffolding for Express
-* Add socket.io
-* Add high-level architectural sketches
+- Add scaffolding for Express
+- Add socket.io
+- Add high-level architectural sketches
