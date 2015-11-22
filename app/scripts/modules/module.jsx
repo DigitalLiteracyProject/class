@@ -6,7 +6,7 @@ import React from 'react';
  * Instantiate a subclass of Module to create a module (lowercase "m"),
  * which teachers can use.
  */
-class Module {
+let Module = class {
     // TODO: figure out way in ES6 to make methods abstract
 
 
@@ -48,4 +48,6 @@ class Module {
         return null;
     }
 
-}
+};
+
+export default Module;
