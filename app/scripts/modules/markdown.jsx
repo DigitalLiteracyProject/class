@@ -7,11 +7,23 @@ import Module from './module';
  */
 let MarkdownModule = class {
     getStudentViewComponent() {
-        return null;
+        return new React.createClass({
+            render: function() {
+                return (
+                    <p>Hi</p>
+                );
+            }
+        });
     }
 
     getEditViewComponent() {
-        return null;
+        return new React.createClass({
+            render: function() {
+                return (
+                    <p>Hey</p>
+                );
+            }
+        });
     }
 };
 
