@@ -8,6 +8,7 @@ import React from 'react';
  */
 let Module = class {
     // TODO: figure out way in ES6 to make methods abstract
+    // TODO: find way to integrate Modules in general with rest of app
 
 
     /**
