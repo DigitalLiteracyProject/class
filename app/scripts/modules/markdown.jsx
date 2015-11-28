@@ -5,8 +5,8 @@ import Module from './module';
 /**
  * A Module with which you can render arbitrary Markdown.
  */
-let MarkdownModule = class {
-    getStudentViewComponent() {
+let MarkdownModule = class extends Module{
+    get studentViewComponent() {
         return new React.createClass({
             render: function() {
                 return (
@@ -16,7 +16,7 @@ let MarkdownModule = class {
         });
     }
 
-    getEditViewComponent() {
+    get editViewComponent() {
         return new React.createClass({
             render: function() {
                 return (

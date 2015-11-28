@@ -16,7 +16,7 @@ let Module = class {
      * Returns a React Component that students will see and interact with.
      * The main user-facing part of this Module.
      */
-    getStudentViewComponent() {
+    get studentViewComponent() {
         return null;
     }
 
@@ -26,7 +26,7 @@ let Module = class {
      * a module. Should contain form fields etc. that let teachers customize
      * the module.
      */
-    getEditViewComponent() {
+    get editViewComponent() {
         return null;
     }
 
@@ -36,7 +36,7 @@ let Module = class {
      * Returns a list of actions or action creators that correspond to the
      * views' events.
      */
-    getActions() {
+    get actions() {
         return null;
     }
 
@@ -45,7 +45,7 @@ let Module = class {
      * TODO: flesh out spec of how this'll work
      * Returns a list of stores that this Module will use.
      */
-    getStores() {
+    get stores() {
         return null;
     }
 
