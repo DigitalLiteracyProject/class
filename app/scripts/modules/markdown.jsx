@@ -5,19 +5,24 @@ import Module from './module';
 /**
  * A Module with which you can render arbitrary Markdown.
  */
-let MarkdownModule = class extends Module{
+let MarkdownModule = class extends Module {
+    constructor(markdown){
+        super();
+        this.markdown = markdown;
+    }
+
     get studentViewComponent() {
-        return new React.createClass({
-            render: function() {
+        return React.createClass({
+            render: () => {
                 return (
-                    <p>Hi</p>
+                    <p>{this.markdown}</p>
                 );
             }
         });
     }
 
     get editViewComponent() {
-        return new React.createClass({
+        return React.createClass({
             render: function() {
                 return (
                     <p>Hey</p>

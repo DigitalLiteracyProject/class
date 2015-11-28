@@ -2,6 +2,8 @@ import React from 'react';
 import {ButtonLink} from 'react-router-bootstrap';
 import {Row, Col, Panel, Input, Button} from 'react-bootstrap';
 
+import MarkdownModule from '../../modules/markdown';
+
 /**
  * A teacher's home page when running a class. Contains a list of modules
  * available to the teacher and information about the current module.
@@ -15,13 +17,17 @@ let ClassDashboardView = React.createClass({
             </Button>
         );
 
+        // testing out a module
+        let module = new MarkdownModule("# header");
+        let ModuleComponent = module.studentViewComponent;
+
         return (
             <Row>
                 <Col xs={12} md={6}>
                     <h2>"My Current Module"</h2>
 
                     <Panel>
-                        <h3>Module Preview</h3>
+                        <ModuleComponent />
                     </Panel>
 
                     <ButtonLink
