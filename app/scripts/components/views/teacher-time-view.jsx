@@ -1,5 +1,5 @@
 import React from 'react';
-import {ProgressBar} from 'react-bootstrap'
+//import {ProgressBar} from 'react-bootstrap'
 
 let TeacherTimeView = React.createClass({
     getInitialState: function(){
@@ -17,7 +17,7 @@ let TeacherTimeView = React.createClass({
         label += ':'+('00'+this.state.date.getMinutes()).slice(-2);
         var now = this.state.date.getMinutes()+(this.state.date.getSeconds()/60.0);
         return (
-            <div><ProgressBar min={0} max={60} now={now} label={label} /></div> // placeholders assume class starts and ends on the hour
+            <div>1:00pm - 2:00pm | Now {label}</div>
         );
     }
 });

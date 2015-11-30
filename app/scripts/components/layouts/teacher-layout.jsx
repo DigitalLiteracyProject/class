@@ -15,7 +15,7 @@ let TeacherLayout = React.createClass({
             <div>
                 <Navbar brand='DLP Class' toggleNavKey={0}>
                     <Nav eventKey={0} right>
-                        <TeacherTimeView></TeacherTimeView>
+                        <NavItem><TeacherTimeView></TeacherTimeView></NavItem>
                         <NavItemLink to="teacher-dashboard" eventKey={1}>Dashboard</NavItemLink>
                         <NavItemLink to="module-library" eventKey={2}>Module Library</NavItemLink>
                         {/* TODO(neel): make this actually log out */}
