@@ -17,6 +17,7 @@ let TeacherLayout = React.createClass({
                     <Nav eventKey={0} right>
                         <NavItemLink to="teacher-dashboard" eventKey={1}>Dashboard</NavItemLink>
                         <NavItemLink to="module-library" eventKey={2}>Module Library</NavItemLink>
+                        <NavItemLink to="change-module" eventKey={3}>Add/edit modules</NavItemLink>
                         {/* TODO(neel): make this actually log out */}
                         <NavItemLink to="teacher-login" eventKey={3}>Log Out</NavItemLink>
                     </Nav>
