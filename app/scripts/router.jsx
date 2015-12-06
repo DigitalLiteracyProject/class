@@ -20,6 +20,8 @@ import StudentLoginView from './components/views/student-login-view';
 import TeacherDashboardView from './components/views/teacher-dashboard-view';
 import TeacherLoginView from './components/views/teacher-login-view';
 import NotFoundView from './components/views/not-found-view';
+import TeacherAddModuleView from './components/views/teacher-add-module-view';
+import TeacherEditModuleView from './components/views/teacher-edit-module-view';
 
 let routes = (
     <Route handler={TopLayout} name="top-layout" path="/">
@@ -43,6 +45,10 @@ let routes = (
                 <Route handler={ModulePreviewView} name="preview-module" path=":moduleId"/>
                 <DefaultRoute handler={ModuleLibraryView} name="module-library"/>
             </Route>
+
+            <Route handler={TeacherAddModuleView} name="add-module" path="module_new" />
+
+            <Route handler={TeacherEditModuleView} name="edit-module" path="module_edit" />
 
             <Route handler={CreateClassView} name="create-class" path="create/class"/>
             <Route handler={CreateModuleView} name="create-module" path="create/module"/>
