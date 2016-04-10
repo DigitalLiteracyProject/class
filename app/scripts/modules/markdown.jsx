@@ -1,4 +1,5 @@
 import React from 'react';
+import {Panel} from 'react-bootstrap';
 
 import Module from './module';
 
@@ -6,8 +7,9 @@ import Module from './module';
  * A Module with which you can render arbitrary Markdown.
  */
 let MarkdownModule = class extends Module {
-    constructor(markdown){
+    constructor(name,markdown){
         super();
+	this.name = name
         this.markdown = markdown;
     }
 
@@ -19,6 +21,16 @@ let MarkdownModule = class extends Module {
                 );
             }
         });
+    }
+
+    get teacherPreviewComponent() {
+	return React.createClass({
+	    render: () => {
+		return (
+		    <p>{this.name}</p>
+		)
+	    }
+	})
     }
 
     get editViewComponent() {

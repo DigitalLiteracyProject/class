@@ -21,6 +21,15 @@ let Module = class {
     }
 
     /**
+      * [ABSTRACT]
+      * Returns a React Component that teachers will see and ineract with.
+      * Should allow teacher to identify the module at a glance
+      */
+    get teacherPreviewComponent() {
+	return null;
+    }
+
+    /**
      * [ABSTRACT]
      * Returns a React Component that teachers will interact with to create
      * a module. Should contain form fields etc. that let teachers customize

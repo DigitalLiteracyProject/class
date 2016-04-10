@@ -10,6 +10,20 @@ import MarkdownModule from '../../modules/markdown';
  */
 let ClassDashboardView = React.createClass({
 
+    getCurModuleComponent: function() {
+	let Module = this.state.curModule.studentViewComponent;
+	return <Module />;
+    },
+  
+    getInitialState: function() {
+	// testing out a module
+        let module = new MarkdownModule("default", "# header");
+        let ModuleComponent = module.studentViewComponent;
+	return {
+	    curModule: module
+	};
+    },
+    
     render: function() {
         let searchButton = (
             <Button>
@@ -18,16 +32,27 @@ let ClassDashboardView = React.createClass({
         );
 
         // testing out a module
-        let module = new MarkdownModule("# header");
+        let module = new MarkdownModule("default", "# header");
         let ModuleComponent = module.studentViewComponent;
 
+	// some dummy modules the teacher can choose to show
+	// TODO(brian): create database for this and populate
+	let moduleA = new MarkdownModule("A","This is the A module");
+	let moduleB = new MarkdownModule("B","This is the B module");
+	let moduleC = new MarkdownModule("C","This is not the D module");
+	let ModuleAPreview = moduleA.teacherPreviewComponent;
+	let ModuleBPreview = moduleB.teacherPreviewComponent;
+	let ModuleCPreview = moduleC.teacherPreviewComponent;
+
+
+	
         return (
             <Row>
                 <Col xs={12} md={6}>
                     <h2>"My Current Module"</h2>
 
                     <Panel>
-                        <ModuleComponent />
+                      {this.getCurModuleComponent()}
                     </Panel>
 
                     <ButtonLink
@@ -45,18 +70,22 @@ let ClassDashboardView = React.createClass({
 
                     <Row>
                         <Col xs={6} md={4}>
-                            <Panel>
-                                A
+                            <Panel onClick={()=>{
+				this.setState({curModule: moduleA});
+				// TODO(brian): emit via socket, pass module,
+				// set up listener elsewhere
+			    }}>
+                                <ModuleAPreview />
                             </Panel>
                         </Col>
                         <Col xs={6} md={4}>
-                            <Panel>
-                                B
+	                    <Panel onClick={()=>this.setState({curModule: moduleB})}>
+                                <ModuleBPreview />
                             </Panel>
                         </Col>
                         <Col xs={6} md={4}>
-                            <Panel>
-                                C
+	                    <Panel onClick={()=>this.setState({curModule: moduleC})}>
+                                <ModuleCPreview />
                             </Panel>
                         </Col>
                     </Row>
